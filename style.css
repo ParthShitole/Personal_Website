@@ -3,8 +3,9 @@
     margin:0;
     padding:0;
     font-family: 'IBM Plex Sans', sans-serif;
-}
+    /*overflow-x: hidden;*/
 
+}
 .nav-container{
     width:100%;
     height: 70px;
@@ -17,7 +18,7 @@
 
 .navbar{
     display:grid;
-    grid-template-columns: 0.1fr 0.15fr auto 1fr;
+    grid-template-columns: 0.14fr 0.11fr auto 1fr;
     width:100%;
     height:100%;
     background-color:#EEEAEA ;
@@ -27,15 +28,17 @@
 
 #navbar-name{
     font-size:21px;
-    justify-self:center;
+    justify-self:left;
     /*padding-top: 8%;*/
 }
 
 .nav-menu{
     display:grid;
-    grid-template-columns: 9% 10% 13% 10% 14% 7% 7% 6% 22%;
+    grid-template-columns: 9% 10% 13% 10% 15% 7% 7% 6% 21%;
+    width:100%;
     align-items:center;
     list-style: none;
+    overflow-x:visible;
 }
 .nav-links{
     text-decoration: none;
@@ -45,8 +48,8 @@
 }
 .logo
 {
-    padding-left: 80%;
-   /* padding-top: 25%;*/
+    /*justify-self: right;*/
+   padding-left: 70%;;
 
 }
 .home{
@@ -76,4 +79,98 @@
 }
 .b{
     padding-left: 7px;
+}
+
+.menu-toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+@media screen and (max-width: 1100px){
+    .nav-container{
+        position: relative;     
+    }
+    .nav-menu{
+        display: grid;
+        grid-template-columns: auto;
+        background:#EEEAEA;
+        margin:0;
+        width:40%;
+        position:absolute;
+        top:70px;
+        right:-100%;
+        opacity:0;
+        transition:all 0.5 ease;
+        text-align: center;
+    }
+
+    #navbar-name{
+        margin-left: 30px;
+    }
+    .nav-menu.active{
+        background: rgb(192,192,192,0.1); /*color of drop down*/
+        
+        left:60%;
+        opacity: 1;
+        transition: all 0.5 ease;
+    }
+
+    .nav-links{
+        text-align:center;
+        font-size: 16.5px;
+        line-height: 40px;
+        width:100%;
+        display:table
+    }
+
+    .nav-links:hover{
+        background-color: #1FD9D3;
+        transition: all 0.4 ease-out;
+    }
+    .navbar{
+        width:100%;
+    }
+    .nav-links-btn{
+        padding:0;
+        border-radius: 0;
+        background-color: #1FD9D3;
+    }
+    /*Which one looks nice with this or without this*/
+    
+
+    #mobile-menu{
+        position: absolute;
+        top:20%;
+        right:5%;
+        /*background-color: black;
+        opacity: 0.5;*/
+        
+        transform: translate(15%,20%);
+    }
+
+    .menu-toggle .bar{
+        display: block;
+        cursor:pointer;
+    }
+
+    .menu-toggle:hover{
+        cursor:pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2)
+    {
+        opacity:0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1)
+    {
+        transform: translatey(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3)
+    {
+        transform: translatey(-8px) rotate(-45deg);
+    }
+
 }
