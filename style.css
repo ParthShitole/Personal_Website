@@ -6,6 +6,12 @@
     /*overflow-x: hidden;*/
 
 }
+body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+/*------------------------NAVBAR----------------------------*/
 .nav-container{
     width:100%;
     height: 70px;
@@ -89,6 +95,7 @@
     background: white;
 }
 
+/*responsive*/
 @media screen and (max-width: 1100px){
     .nav-container{
         position: relative;     
@@ -115,7 +122,7 @@
         
         left:60%;
         opacity: 1;
-        transition: all 0.5 ease;
+        transition: all 0.8 ease;
     }
 
     .nav-links{
@@ -173,4 +180,146 @@
         transform: translatey(-8px) rotate(-45deg);
     }
 
+
 }
+
+/*------------------------Home-Front----------------------------*/
+.homefront{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    z-index: -1;
+}
+.left-icon{
+    background: white;
+    height: 100%;
+    width: 50%;
+}
+.right-icon{
+    background: white;
+    height: 100%;
+    width: 50%;
+}
+
+
+/*------------------------About-us----------------------------*/
+.About-us{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    background-color: white;
+    border: 3px solid black
+}
+
+/*------------------------Portfolio----------------------------*/
+
+.portfolio{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    background-color: white;
+    border: 3px solid black
+}
+
+
+/*------------------------Footer----------------------------*/
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.row1 h4{
+    font-family: 'IBM Plex Sans';
+    font-size: 39px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color:#1FD9D3 ;
+    padding-bottom: 30px;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #24262b;
+    padding: 40px 0px ;
+    padding-bottom: 100px;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col .fot1{
+    margin-right: 300px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
